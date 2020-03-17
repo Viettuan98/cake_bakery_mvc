@@ -1,0 +1,15 @@
+
+RewriteEngine On
+#trang chu
+RewriteRule ^Home$ index.php
+#trang san pham
+RewriteRule ^Product$ index.php?controller=Product
+#trang chi tiet
+RewriteRule ^Product/Detail/(.*)/(.*)$ index.php?controller=Product&action=detail&id=$1
+RewriteRule ^Product/Detail/(.*)/(.*)$ index.php?controller=Product&action=new&id=$1
+#trang danh muc
+RewriteRule ^Product/Category/(.*)/(.*)$ index.php?controller=Product&action=category&id=$1
+#trang gio hang
+RewriteRule ^Cart$ index.php?controller=Cart
+RewriteRule ^Cart/Checkout$ index.php?controller=Cart&action=checkout
+
